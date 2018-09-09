@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		052EEE0B8CAE6552C2AB16ED /* Pods_htchhkr_development.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209F8F32D170921046B57384 /* Pods_htchhkr_development.framework */; };
+		1C791F3E213BB0AD002B4221 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C791F3D213BB0AD002B4221 /* GradientView.swift */; };
+		1C7E1D9F2143AF79005B1DEB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1D9E2143AF79005B1DEB /* RoundImageView.swift */; };
+		1C7E1DA12143B609005B1DEB /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */; };
+		1C7E1DA32143B910005B1DEB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA22143B910005B1DEB /* CircleView.swift */; };
+		1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */; };
 		1CF7CCBC2134869200D9C60E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7CCBB2134869200D9C60E /* AppDelegate.swift */; };
 		1CF7CCBE2134869200D9C60E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7CCBD2134869200D9C60E /* ViewController.swift */; };
 		1CF7CCC12134869200D9C60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CF7CCBF2134869200D9C60E /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C791F3D213BB0AD002B4221 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1C7E1D9E2143AF79005B1DEB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		1C7E1DA22143B910005B1DEB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		1CF7CCB82134869200D9C60E /* htchhkr-development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "htchhkr-development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF7CCBB2134869200D9C60E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CF7CCBD2134869200D9C60E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +50,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C791F3A213BAFCE002B4221 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C791F3D213BB0AD002B4221 /* GradientView.swift */,
+				1C7E1D9E2143AF79005B1DEB /* RoundImageView.swift */,
+				1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */,
+				1C7E1DA22143B910005B1DEB /* CircleView.swift */,
+				1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C791F3B213BAFFA002B4221 /* Contoler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contoler;
+			sourceTree = "<group>";
+		};
+		1C791F3C213BB009002B4221 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1CF7CCAF2134869100D9C60E = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +97,9 @@
 		1CF7CCBA2134869200D9C60E /* htchhkr-development */ = {
 			isa = PBXGroup;
 			children = (
+				1C791F3C213BB009002B4221 /* Model */,
+				1C791F3A213BAFCE002B4221 /* View */,
+				1C791F3B213BAFFA002B4221 /* Contoler */,
 				1CF7CCBB2134869200D9C60E /* AppDelegate.swift */,
 				1CF7CCBD2134869200D9C60E /* ViewController.swift */,
 				1CF7CCBF2134869200D9C60E /* Main.storyboard */,
@@ -162,8 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-htchhkr-development/Pods-htchhkr-development-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -173,8 +210,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -192,15 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-htchhkr-development-checkManifestLockResult.txt",
 			);
@@ -216,8 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */,
+				1C7E1DA32143B910005B1DEB /* CircleView.swift in Sources */,
 				1CF7CCBE2134869200D9C60E /* ViewController.swift in Sources */,
+				1C7E1D9F2143AF79005B1DEB /* RoundImageView.swift in Sources */,
+				1C7E1DA12143B609005B1DEB /* RoundedShadowView.swift in Sources */,
 				1CF7CCBC2134869200D9C60E /* AppDelegate.swift in Sources */,
+				1C791F3E213BB0AD002B4221 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
