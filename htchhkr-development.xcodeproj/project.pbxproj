@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		052EEE0B8CAE6552C2AB16ED /* Pods_htchhkr_development.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209F8F32D170921046B57384 /* Pods_htchhkr_development.framework */; };
+		1C3C5BDE214CE353001961C9 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3C5BDD214CE353001961C9 /* UIViewExt.swift */; };
+		1C3C5BE0214D8D18001961C9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3C5BDF214D8D18001961C9 /* LoginVC.swift */; };
 		1C791F3E213BB0AD002B4221 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C791F3D213BB0AD002B4221 /* GradientView.swift */; };
 		1C7E1D9F2143AF79005B1DEB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1D9E2143AF79005B1DEB /* RoundImageView.swift */; };
 		1C7E1DA12143B609005B1DEB /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3C5BDD214CE353001961C9 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		1C3C5BDF214D8D18001961C9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1C791F3D213BB0AD002B4221 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1C7E1D9E2143AF79005B1DEB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C3C5BDC214CE2E5001961C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C3C5BDD214CE353001961C9 /* UIViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1C791F3A213BAFCE002B4221 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +85,7 @@
 			children = (
 				1CBB4CA02144FAE300C70C49 /* LeftSidePanelVC.swift */,
 				1CBB4CA22144FC1500C70C49 /* ContainerVC.swift */,
+				1C3C5BDF214D8D18001961C9 /* LoginVC.swift */,
 			);
 			path = Contoler;
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 		1CF7CCBA2134869200D9C60E /* htchhkr-development */ = {
 			isa = PBXGroup;
 			children = (
+				1C3C5BDC214CE2E5001961C9 /* Extensions */,
 				1CBB4CA4214503F300C70C49 /* Protocols */,
 				1C791F3C213BB009002B4221 /* Model */,
 				1C791F3A213BAFCE002B4221 /* View */,
@@ -266,9 +280,11 @@
 			files = (
 				1CBB4CA62145044100C70C49 /* CenterVCDelegate.swift in Sources */,
 				1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */,
+				1C3C5BE0214D8D18001961C9 /* LoginVC.swift in Sources */,
 				1CBB4CA12144FAE300C70C49 /* LeftSidePanelVC.swift in Sources */,
 				1C7E1DA32143B910005B1DEB /* CircleView.swift in Sources */,
 				1CBB4CA32144FC1500C70C49 /* ContainerVC.swift in Sources */,
+				1C3C5BDE214CE353001961C9 /* UIViewExt.swift in Sources */,
 				1CF7CCBE2134869200D9C60E /* HomeVC.swift in Sources */,
 				1C7E1D9F2143AF79005B1DEB /* RoundImageView.swift in Sources */,
 				1C7E1DA12143B609005B1DEB /* RoundedShadowView.swift in Sources */,
