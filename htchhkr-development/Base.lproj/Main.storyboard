@@ -242,47 +242,47 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="urf-6Z-N8L">
-                                <rect key="frame" x="16" y="110" width="81" height="144"/>
+                                <rect key="frame" x="16" y="110" width="114" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzC-jf-TVu">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="45"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Payment">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbZ-ak-zSy">
-                                        <rect key="frame" x="0.0" y="36" width="81" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="45" width="114" height="45"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Your Trips">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSC-o8-p9Z">
-                                        <rect key="frame" x="0.0" y="72" width="81" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="90" width="114" height="45"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Help">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-9o-Vmk">
-                                        <rect key="frame" x="0.0" y="108" width="81" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-9o-Vmk">
+                                        <rect key="frame" x="0.0" y="135" width="114" height="45"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="ZFr-mf-N0A"/>
+                                    <constraint firstAttribute="height" constant="180" id="ZFr-mf-N0A"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIz-5Z-IVt">
-                                <rect key="frame" x="16" y="611" width="127" height="36"/>
+                                <rect key="frame" x="16" y="611" width="179" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1B3-qD-mmj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                 <state key="normal" title="Sing Up / Login">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -333,24 +333,27 @@
                                             <rect key="frame" x="20" y="30" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="cancelBtn"/>
+                                            <connections>
+                                                <action selector="canselBtnWasPressed:" destination="9DT-A6-jCg" eventType="touchUpInside" id="4Mr-Vc-mG4"/>
+                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UE1-kF-BES">
-                                            <rect key="frame" x="20" y="161" width="350" height="345"/>
+                                            <rect key="frame" x="20" y="161" width="342" height="345"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V1K-bj-Ya3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="140"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="140"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-Md-Z3r">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="66"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="342" height="66"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTCH" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJN-d9-aSL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="66"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="66"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="48"/>
                                                                     <color key="textColor" red="0.84705882352941175" green="0.27843137254901962" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HKR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-G3-okM">
-                                                                    <rect key="frame" x="175" y="0.0" width="175" height="66"/>
+                                                                    <rect key="frame" x="171" y="0.0" width="171" height="66"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="48"/>
                                                                     <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -358,7 +361,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing up or login to start requesting rides with HTCHHKR: the easiest way to get a lift anywhere!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DD-IL-A16">
-                                                            <rect key="frame" x="0.0" y="66" width="350" height="74"/>
+                                                            <rect key="frame" x="0.0" y="66" width="342" height="74"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                             <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -366,7 +369,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vqo-De-60t">
-                                                    <rect key="frame" x="0.0" y="155" width="350" height="41"/>
+                                                    <rect key="frame" x="0.0" y="155" width="342" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="5bT-LD-sa6"/>
                                                     </constraints>
@@ -376,8 +379,8 @@
                                                     </segments>
                                                     <color key="tintColor" red="0.84705882352941175" green="0.27843137254901962" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-yb-qvd">
-                                                    <rect key="frame" x="0.0" y="210" width="350" height="60"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-yb-qvd" customClass="RoundedCornerTextField" customModule="htchhkr_development" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="210" width="342" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="nbK-1C-ecz"/>
                                                     </constraints>
@@ -385,8 +388,8 @@
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k52-as-2z0">
-                                                    <rect key="frame" x="0.0" y="285" width="350" height="60"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k52-as-2z0" customClass="RoundedCornerTextField" customModule="htchhkr_development" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="285" width="342" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="hbv-IA-h0f"/>
                                                     </constraints>
@@ -396,13 +399,12 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="350" id="PxE-nd-HdY"/>
+                                                <constraint firstAttribute="width" constant="342" id="PxE-nd-HdY"/>
                                                 <constraint firstAttribute="height" constant="345" id="WDz-Mg-ES7"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="bQS-zc-qa0"/>
                                             </constraints>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-ym-jT8" customClass="RoundedShadowButton" customModule="htchhkr_development" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="600" width="350" height="47"/>
+                                            <rect key="frame" x="20" y="600" width="342" height="47"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="25"/>
                                             <state key="normal" title="SING UP / LOGIN">
