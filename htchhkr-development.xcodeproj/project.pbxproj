@@ -17,6 +17,7 @@
 		1C7E1DA32143B910005B1DEB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA22143B910005B1DEB /* CircleView.swift */; };
 		1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */; };
 		1CAF31A6214EE1BF0047B9C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF31A5214EE1BE0047B9C4 /* GoogleService-Info.plist */; };
+		1CAF31A9214EF22D0047B9C4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF31A8214EF22D0047B9C4 /* DataService.swift */; };
 		1CBB4CA12144FAE300C70C49 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB4CA02144FAE300C70C49 /* LeftSidePanelVC.swift */; };
 		1CBB4CA32144FC1500C70C49 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB4CA22144FC1500C70C49 /* ContainerVC.swift */; };
 		1CBB4CA62145044100C70C49 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB4CA52145044100C70C49 /* CenterVCDelegate.swift */; };
@@ -37,6 +38,7 @@
 		1C7E1DA22143B910005B1DEB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		1CAF31A5214EE1BE0047B9C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1CAF31A8214EF22D0047B9C4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		1CBB4CA02144FAE300C70C49 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		1CBB4CA22144FC1500C70C49 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		1CBB4CA52145044100C70C49 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1CAF31A7214EF1D30047B9C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1CAF31A8214EF22D0047B9C4 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1CBB4CA4214503F300C70C49 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		1CF7CCBA2134869200D9C60E /* htchhkr-development */ = {
 			isa = PBXGroup;
 			children = (
+				1CAF31A7214EF1D30047B9C4 /* Services */,
 				1C3C5BDC214CE2E5001961C9 /* Extensions */,
 				1CBB4CA4214503F300C70C49 /* Protocols */,
 				1C791F3C213BB009002B4221 /* Model */,
@@ -286,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CBB4CA62145044100C70C49 /* CenterVCDelegate.swift in Sources */,
+				1CAF31A9214EF22D0047B9C4 /* DataService.swift in Sources */,
 				1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */,
 				1C3C5BE0214D8D18001961C9 /* LoginVC.swift in Sources */,
 				1CBB4CA12144FAE300C70C49 /* LeftSidePanelVC.swift in Sources */,
