@@ -410,6 +410,9 @@
                                             <state key="normal" title="SING UP / LOGIN">
                                                 <color key="titleColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="authBtnWasPressed:" destination="9DT-A6-jCg" eventType="touchUpInside" id="L4d-kK-Xap"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -437,6 +440,12 @@
                             <constraint firstItem="4FY-ht-bgk" firstAttribute="leading" secondItem="Qnd-p9-XYX" secondAttribute="leading" id="uQB-SS-5yB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authBtn" destination="zAe-ym-jT8" id="2Hk-2H-15P"/>
+                        <outlet property="emailField" destination="6DZ-yb-qvd" id="Vbz-IN-nFE"/>
+                        <outlet property="passwordField" destination="k52-as-2z0" id="feL-Xq-T3v"/>
+                        <outlet property="segmentedControl" destination="Vqo-De-60t" id="uO4-9D-bpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vn6-Gw-keb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
