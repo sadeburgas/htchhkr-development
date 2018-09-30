@@ -38,6 +38,7 @@ class DataService {
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, Any>, isDriver: Bool) {
         if isDriver {
             REF_DRIVERS.child(uid).updateChildValues(userData)
+        } else {
             REF_USERS.child(uid).updateChildValues(userData)
         }
     }
