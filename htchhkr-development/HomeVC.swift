@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 import RevealingSplashView
 
 class HomeVC: UIViewController , MKMapViewDelegate{
@@ -17,11 +18,24 @@ class HomeVC: UIViewController , MKMapViewDelegate{
     
     var delegate: CenterVCDelegate?
     
+    var manager: CLLocationManager?
+    
+    var regionRadius: CLLocationDistance = 1000
+    
     let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manager = CLLocationManager()
+        manager?.delegate = self
+        manager?.desiredAccuracy = kCLLocationAccuracyBest
+        
+        checkLocationAuthStatus()
+        
         mapView.delegate = self
+        
+        centerMapOnUserLocation()
         
         self.view.addSubview(revealingSplashView)
         revealingSplashView.animationType = SplashAnimationType.heartBeat
@@ -29,14 +43,45 @@ class HomeVC: UIViewController , MKMapViewDelegate{
         
         revealingSplashView.heartAttack = true
     }
+    
+    func checkLocationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            
+//            manager?.delegate = self
+//            manager?.desiredAccuracy = kCLLocationAccuracyBest
+            manager?.startUpdatingLocation()
+        } else {
+            manager?.requestWhenInUseAuthorization()
+            //dobavix
+            manager?.requestAlwaysAuthorization()
+        }
+    }
+    
+    func centerMapOnUserLocation() {
+        let coordinateRegion = MKCoordinateRegion(center: mapView.userLocation.coordinate, latitudinalMeters: regionRadius * 2, longitudinalMeters: regionRadius * 2)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
 
     @IBAction func actionBtnWasPressed(_ sender: Any) {
         actionBtn.animateButton(shouldLoad: true, withMessage: nil)
     }
     
+    @IBAction func centerMapBtnWasPressed(_ sender: Any) {
+        centerMapOnUserLocation()
+    }
     @IBAction func menuBtnWasPressed(_ sender: Any) {
         delegate?.toggleLeftPanel()
         
     }
 }
 
+extension HomeVC: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthStatus()
+        if status == .authorizedAlways {
+            
+            mapView.showsUserLocation = true
+            mapView.userTrackingMode = .follow
+        }
+    }
+}
