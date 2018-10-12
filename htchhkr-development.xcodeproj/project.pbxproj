@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052EEE0B8CAE6552C2AB16ED /* Pods_htchhkr_development.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209F8F32D170921046B57384 /* Pods_htchhkr_development.framework */; };
+		1C1B7D11216C131D00F0C45D /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1B7D10216C131D00F0C45D /* UpdateService.swift */; };
 		1C221D57214E375C00646303 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C221D56214E375C00646303 /* RoundedCornerTextField.swift */; };
 		1C3C5BDE214CE353001961C9 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3C5BDD214CE353001961C9 /* UIViewExt.swift */; };
 		1C3C5BE0214D8D18001961C9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3C5BDF214D8D18001961C9 /* LoginVC.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C1B7D10216C131D00F0C45D /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		1C221D56214E375C00646303 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		1C3C5BDD214CE353001961C9 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		1C3C5BDF214D8D18001961C9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				1CAF31A8214EF22D0047B9C4 /* DataService.swift */,
+				1C1B7D10216C131D00F0C45D /* UpdateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				1CBB4CA32144FC1500C70C49 /* ContainerVC.swift in Sources */,
 				1C3C5BDE214CE353001961C9 /* UIViewExt.swift in Sources */,
 				1CF7CCBE2134869200D9C60E /* HomeVC.swift in Sources */,
+				1C1B7D11216C131D00F0C45D /* UpdateService.swift in Sources */,
 				1C7E1D9F2143AF79005B1DEB /* RoundImageView.swift in Sources */,
 				1C7E1DA12143B609005B1DEB /* RoundedShadowView.swift in Sources */,
 				1C221D57214E375C00646303 /* RoundedCornerTextField.swift in Sources */,
