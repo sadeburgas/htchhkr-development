@@ -128,7 +128,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLO-LK-txb">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gLO-LK-txb">
                                                 <rect key="frame" x="25" y="0.0" width="278" height="20"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -207,6 +207,8 @@
                     <connections>
                         <outlet property="actionBtn" destination="Gd3-fB-d1v" id="NXn-rn-aA3"/>
                         <outlet property="centerMapBtn" destination="Wp5-Nk-d1f" id="I5w-cw-ObM"/>
+                        <outlet property="destinationCircle" destination="k8b-JL-k0J" id="mHX-AJ-Ibm"/>
+                        <outlet property="destinationTextField" destination="gLO-LK-txb" id="dGV-pn-udz"/>
                         <outlet property="mapView" destination="cr6-1q-48S" id="T1s-Wg-56B"/>
                     </connections>
                 </viewController>
