@@ -21,7 +21,11 @@ class HomeVC: UIViewController {
     @IBOutlet weak var destinationCircle: CircleView!
     
     var delegate: CenterVCDelegate?
+    
     var manager: CLLocationManager?
+    
+    var currentUserId = Auth.auth().currentUser?.uid
+    
     var regionRadius: CLLocationDistance = 1000
     
     let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
@@ -157,6 +161,13 @@ extension HomeVC: MKMapViewDelegate {
             view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.image = UIImage(named: "driverAnnotation")
             return view
+        } else if let annotation = annotation as? PassengerAnnotation {
+            let indentifier = "passenger"
+            var view: MKAnnotationView
+            view = MKAnnotationView(annotation: annotation, reuseIdentifier: indentifier)
+            view.image  = UIImage(named: "currentLocationAnnotation")
+            return view
+            
         }
         return nil
     }
@@ -264,7 +275,28 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         return matchingItems.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let passengerCoordinate = manager?.location?.coordinate
+        
+        let passengerAnnotation = PassengerAnnotation(coordinate: passengerCoordinate!, key: currentUserId!)
+        mapView.addAnnotation(passengerAnnotation)
+        
+        destinationTextField.text = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        
+        let selectedMapItem = matchingItems[indexPath.row]
+        
+        DataService.instance.REF_USERS.child(currentUserId!).updateChildValues(["tripCoordinate": [selectedMapItem.placemark.coordinate.latitude, selectedMapItem.placemark.coordinate.longitude]])
+        
         animateTableView(shouldShow: false)
         print("selected!!!")
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if destinationTextField.text == "" {
+            animateTableView(shouldShow: false)
+        }
+        
     }
 }
