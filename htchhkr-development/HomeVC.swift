@@ -32,6 +32,7 @@ class HomeVC: UIViewController {
     
     var tableView = UITableView()
     var matchingItems:[MKMapItem] = [MKMapItem]()
+    var selectedItemPlacemark: MKPlacemark? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,6 +169,16 @@ extension HomeVC: MKMapViewDelegate {
             view.image  = UIImage(named: "currentLocationAnnotation")
             return view
             
+        } else if let annotation = annotation as? MKPointAnnotation {
+            let indentifier = "destination"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: indentifier)
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: indentifier)
+            } else {
+                annotationView?.annotation = annotation
+            }
+            annotationView?.image = UIImage(named: "destinationAnnotation")
+            return annotationView
         }
         return nil
     }
@@ -195,6 +206,20 @@ extension HomeVC: MKMapViewDelegate {
                 }
             }
         }
+    }
+    
+    func dropPinFor(placemark: MKPlacemark) {
+        selectedItemPlacemark = placemark
+        
+        for annotation in mapView.annotations {
+            if annotation.isKind(of: MKPointAnnotation.self) {
+                mapView.removeAnnotation(annotation)
+            }
+        }
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+        mapView.addAnnotation(annotation)
     }
 }
 extension HomeVC: UITextFieldDelegate {
@@ -286,6 +311,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let selectedMapItem = matchingItems[indexPath.row]
         
         DataService.instance.REF_USERS.child(currentUserId!).updateChildValues(["tripCoordinate": [selectedMapItem.placemark.coordinate.latitude, selectedMapItem.placemark.coordinate.longitude]])
+        
+        dropPinFor(placemark: selectedMapItem.placemark)
         
         animateTableView(shouldShow: false)
         print("selected!!!")
