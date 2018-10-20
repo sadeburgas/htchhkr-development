@@ -18,6 +18,7 @@
 		1C7E1DA12143B609005B1DEB /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */; };
 		1C7E1DA32143B910005B1DEB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA22143B910005B1DEB /* CircleView.swift */; };
 		1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */; };
+		1C946391217941570074D4D6 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C946390217941570074D4D6 /* UIViewControllerExt.swift */; };
 		1CAF31A6214EE1BF0047B9C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF31A5214EE1BE0047B9C4 /* GoogleService-Info.plist */; };
 		1CAF31A9214EF22D0047B9C4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF31A8214EF22D0047B9C4 /* DataService.swift */; };
 		1CB156152172454900D9DFDF /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB156142172454900D9DFDF /* PassengerAnnotation.swift */; };
@@ -42,6 +43,7 @@
 		1C7E1DA02143B609005B1DEB /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		1C7E1DA22143B910005B1DEB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		1C946390217941570074D4D6 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		1CAF31A5214EE1BE0047B9C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CAF31A8214EF22D0047B9C4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		1CB156142172454900D9DFDF /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1C3C5BDD214CE353001961C9 /* UIViewExt.swift */,
+				1C946390217941570074D4D6 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				1CBB4CA62145044100C70C49 /* CenterVCDelegate.swift in Sources */,
 				1CAF31A9214EF22D0047B9C4 /* DataService.swift in Sources */,
+				1C946391217941570074D4D6 /* UIViewControllerExt.swift in Sources */,
 				1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */,
 				1C3C5BE0214D8D18001961C9 /* LoginVC.swift in Sources */,
 				1CBB4CA12144FAE300C70C49 /* LeftSidePanelVC.swift in Sources */,
