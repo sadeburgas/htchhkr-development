@@ -66,7 +66,7 @@ class HomeVC: UIViewController, Alertable  {
             if let tripDict = tripDict {
                 let pickupCoordinateArray = tripDict["pickupCoordinate"] as! NSArray
                 let tripKey = tripDict["passengerKey"] as! String
-                let acceptanceStatus = tripDict["tripAccepted"] as! Bool
+                let acceptanceStatus = tripDict["tripIsAccepted"] as! Bool
                 
                 if acceptanceStatus == false {
                     DataService.instance.driverIsAvailable(key: self.currentUserId!, handler: { (available) in
@@ -84,6 +84,29 @@ class HomeVC: UIViewController, Alertable  {
                 }
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DataService.instance.driverIsAvailable(key: self.currentUserId!, handler:  { (status) in
+            if status == false {
+                DataService.instance.REF_TRIPS.observeSingleEvent(of: .value, with: { (tripSnapshot) in
+                    if let tripSnapshot = tripSnapshot.children.allObjects as? [DataSnapshot] {
+                        for trip in tripSnapshot {
+                            if trip.childSnapshot(forPath: "driverKey").value as?   String == self.currentUserId! {
+                                let pickupCoordinateArray = trip.childSnapshot(forPath: "pickupCoordinate").value as! NSArray
+                                let pickupCoordinate = CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees)
+                                let pickupPlacemark = MKPlacemark(coordinate: pickupCoordinate)
+                                
+                                self.dropPinFor(placemark: pickupPlacemark)
+                                self.searchMapKitForResultsWithPolyline(forMapItem: MKMapItem(placemark: pickupPlacemark))
+                            }
+                        }
+                    }
+                })
+            }
+        })
     }
     
     func checkLocationAuthStatus() {
@@ -238,6 +261,8 @@ extension HomeVC: MKMapViewDelegate {
         lineRenderer.strokeColor = UIColor(displayP3Red: 216/255, green: 71/255, blue: 30/255, alpha: 0.75)
         lineRenderer.lineWidth = 3
         
+        shouldPresentLoadingView(false)
+        
         zoom(toFitAnnotationFromMapView: self.mapView)
         
         return lineRenderer
@@ -297,7 +322,8 @@ extension HomeVC: MKMapViewDelegate {
             
             self.mapView.addOverlay(self.route.polyline)
             
-            self.shouldPresentLoadingView(false)
+            let delegate = AppDelegate.getAppDelegate()
+            delegate.window?.rootViewController?.shouldPresentLoadingView(false)
         }
         
     }

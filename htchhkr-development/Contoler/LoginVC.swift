@@ -40,9 +40,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
             self.view.endEditing(true)
 
             if let email = emailField.text, let password = passwordField.text {
-                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                Auth.auth().signIn(withEmail: email, password: password) { (autResult, error) in
                     if error == nil {
-                        if let user = user {
+                        if let user = autResult?.user {
                             if self.segmentedControl.selectedSegmentIndex == 0 {
                                 let userData = ["provider": user.providerID] as [String: Any]
                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: false)
@@ -78,7 +78,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                                     }
                                 }
                             } else {
-                                if let user = user {
+                                if let user = autResult?.user {
                                     if self.segmentedControl.selectedSegmentIndex == 0 {
                                         let userData = ["provider": user.providerID] as [String: Any]
                                         DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: false)

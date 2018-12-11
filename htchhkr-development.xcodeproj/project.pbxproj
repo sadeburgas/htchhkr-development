@@ -21,6 +21,8 @@
 		1C7E1DA32143B910005B1DEB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA22143B910005B1DEB /* CircleView.swift */; };
 		1C7E1DA52143BD3B005B1DEB /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */; };
 		1C946391217941570074D4D6 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C946390217941570074D4D6 /* UIViewControllerExt.swift */; };
+		1C9C384521AF492A005A9245 /* htchhkr_developmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C384421AF492A005A9245 /* htchhkr_developmentUITests.swift */; };
+		1C9C385321AF4956005A9245 /* htchhkr_developmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C385221AF4956005A9245 /* htchhkr_developmentTests.swift */; };
 		1CAF31A6214EE1BF0047B9C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF31A5214EE1BE0047B9C4 /* GoogleService-Info.plist */; };
 		1CAF31A9214EF22D0047B9C4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF31A8214EF22D0047B9C4 /* DataService.swift */; };
 		1CB156152172454900D9DFDF /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB156142172454900D9DFDF /* PassengerAnnotation.swift */; };
@@ -34,6 +36,23 @@
 		1CF7CCC32134869400D9C60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF7CCC22134869400D9C60E /* Assets.xcassets */; };
 		1CF7CCC62134869400D9C60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CF7CCC42134869400D9C60E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C9C384721AF492A005A9245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CF7CCB02134869100D9C60E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CF7CCB72134869200D9C60E;
+			remoteInfo = "htchhkr-development";
+		};
+		1C9C385521AF4956005A9245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CF7CCB02134869100D9C60E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CF7CCB72134869200D9C60E;
+			remoteInfo = "htchhkr-development";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1C1B7D10216C131D00F0C45D /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
@@ -49,6 +68,12 @@
 		1C7E1DA22143B910005B1DEB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		1C7E1DA42143BD3B005B1DEB /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		1C946390217941570074D4D6 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		1C9C384221AF492A005A9245 /* htchhkr-developmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "htchhkr-developmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9C384421AF492A005A9245 /* htchhkr_developmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = htchhkr_developmentUITests.swift; sourceTree = "<group>"; };
+		1C9C384621AF492A005A9245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C9C385021AF4955005A9245 /* htchhkr-developmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "htchhkr-developmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9C385221AF4956005A9245 /* htchhkr_developmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = htchhkr_developmentTests.swift; sourceTree = "<group>"; };
+		1C9C385421AF4956005A9245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CAF31A5214EE1BE0047B9C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CAF31A8214EF22D0047B9C4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		1CB156142172454900D9DFDF /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
@@ -69,6 +94,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C9C383F21AF492A005A9245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9C384D21AF4955005A9245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CF7CCB52134869200D9C60E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +162,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1C9C384321AF492A005A9245 /* htchhkr-developmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1C9C384421AF492A005A9245 /* htchhkr_developmentUITests.swift */,
+				1C9C384621AF492A005A9245 /* Info.plist */,
+			);
+			path = "htchhkr-developmentUITests";
+			sourceTree = "<group>";
+		};
+		1C9C385121AF4956005A9245 /* htchhkr-developmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C9C385221AF4956005A9245 /* htchhkr_developmentTests.swift */,
+				1C9C385421AF4956005A9245 /* Info.plist */,
+			);
+			path = "htchhkr-developmentTests";
+			sourceTree = "<group>";
+		};
 		1CAF31A7214EF1D30047B9C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				1CF7CCBA2134869200D9C60E /* htchhkr-development */,
+				1C9C384321AF492A005A9245 /* htchhkr-developmentUITests */,
+				1C9C385121AF4956005A9245 /* htchhkr-developmentTests */,
 				1CF7CCB92134869200D9C60E /* Products */,
 				AAE2EB6CF5A00380D2E9D6D1 /* Pods */,
 				5891799B7452CA03D4D3FEDD /* Frameworks */,
@@ -155,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				1CF7CCB82134869200D9C60E /* htchhkr-development.app */,
+				1C9C384221AF492A005A9245 /* htchhkr-developmentUITests.xctest */,
+				1C9C385021AF4955005A9245 /* htchhkr-developmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +260,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1C9C384121AF492A005A9245 /* htchhkr-developmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9C384921AF492A005A9245 /* Build configuration list for PBXNativeTarget "htchhkr-developmentUITests" */;
+			buildPhases = (
+				1C9C383E21AF492A005A9245 /* Sources */,
+				1C9C383F21AF492A005A9245 /* Frameworks */,
+				1C9C384021AF492A005A9245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C9C384821AF492A005A9245 /* PBXTargetDependency */,
+			);
+			name = "htchhkr-developmentUITests";
+			productName = "htchhkr-developmentUITests";
+			productReference = 1C9C384221AF492A005A9245 /* htchhkr-developmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1C9C384F21AF4955005A9245 /* htchhkr-developmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9C385721AF4956005A9245 /* Build configuration list for PBXNativeTarget "htchhkr-developmentTests" */;
+			buildPhases = (
+				1C9C384C21AF4955005A9245 /* Sources */,
+				1C9C384D21AF4955005A9245 /* Frameworks */,
+				1C9C384E21AF4955005A9245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C9C385621AF4956005A9245 /* PBXTargetDependency */,
+			);
+			name = "htchhkr-developmentTests";
+			productName = "htchhkr-developmentTests";
+			productReference = 1C9C385021AF4955005A9245 /* htchhkr-developmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1CF7CCB72134869200D9C60E /* htchhkr-development */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CF7CCCA2134869400D9C60E /* Build configuration list for PBXNativeTarget "htchhkr-development" */;
@@ -224,10 +321,18 @@
 		1CF7CCB02134869100D9C60E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = sade;
 				TargetAttributes = {
+					1C9C384121AF492A005A9245 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1CF7CCB72134869200D9C60E;
+					};
+					1C9C384F21AF4955005A9245 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1CF7CCB72134869200D9C60E;
+					};
 					1CF7CCB72134869200D9C60E = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
@@ -248,11 +353,27 @@
 			projectRoot = "";
 			targets = (
 				1CF7CCB72134869200D9C60E /* htchhkr-development */,
+				1C9C384121AF492A005A9245 /* htchhkr-developmentUITests */,
+				1C9C384F21AF4955005A9245 /* htchhkr-developmentTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1C9C384021AF492A005A9245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9C384E21AF4955005A9245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CF7CCB62134869200D9C60E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,7 +396,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-htchhkr-development/Pods-htchhkr-development-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -283,7 +404,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -314,6 +435,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C9C383E21AF492A005A9245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9C384521AF492A005A9245 /* htchhkr_developmentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9C384C21AF4955005A9245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9C385321AF4956005A9245 /* htchhkr_developmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CF7CCB42134869200D9C60E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +481,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1C9C384821AF492A005A9245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CF7CCB72134869200D9C60E /* htchhkr-development */;
+			targetProxy = 1C9C384721AF492A005A9245 /* PBXContainerItemProxy */;
+		};
+		1C9C385621AF4956005A9245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CF7CCB72134869200D9C60E /* htchhkr-development */;
+			targetProxy = 1C9C385521AF4956005A9245 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		1CF7CCBF2134869200D9C60E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -364,6 +514,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1C9C384A21AF492A005A9245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2EKTHK2S2T;
+				INFOPLIST_FILE = "htchhkr-developmentUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sade.htchhkr-developmentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "htchhkr-development";
+			};
+			name = Debug;
+		};
+		1C9C384B21AF492A005A9245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2EKTHK2S2T;
+				INFOPLIST_FILE = "htchhkr-developmentUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sade.htchhkr-developmentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "htchhkr-development";
+			};
+			name = Release;
+		};
+		1C9C385821AF4956005A9245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2EKTHK2S2T;
+				INFOPLIST_FILE = "htchhkr-developmentTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sade.htchhkr-developmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/htchhkr-development.app/htchhkr-development";
+			};
+			name = Debug;
+		};
+		1C9C385921AF4956005A9245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2EKTHK2S2T;
+				INFOPLIST_FILE = "htchhkr-developmentTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sade.htchhkr-developmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/htchhkr-development.app/htchhkr-development";
+			};
+			name = Release;
+		};
 		1CF7CCC82134869400D9C60E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -415,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -469,7 +707,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -486,6 +724,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2EKTHK2S2T;
 				INFOPLIST_FILE = "htchhkr-development/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +732,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sade.htchhkr-development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -505,6 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2EKTHK2S2T;
 				INFOPLIST_FILE = "htchhkr-development/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,13 +752,31 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sade.htchhkr-development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C9C384921AF492A005A9245 /* Build configuration list for PBXNativeTarget "htchhkr-developmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9C384A21AF492A005A9245 /* Debug */,
+				1C9C384B21AF492A005A9245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9C385721AF4956005A9245 /* Build configuration list for PBXNativeTarget "htchhkr-developmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9C385821AF4956005A9245 /* Debug */,
+				1C9C385921AF4956005A9245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1CF7CCB32134869100D9C60E /* Build configuration list for PBXProject "htchhkr-development" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

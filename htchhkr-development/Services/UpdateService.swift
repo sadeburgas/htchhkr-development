@@ -41,7 +41,7 @@ class UpdateService {
     }
     
     func observeTrips(handler: @escaping(_ coordinateDic: Dictionary<String, AnyObject>?) -> Void) {
-        DataService.instance.REF_TRIPS.observeSingleEvent(of: .value, with: { (snapshot) in
+        DataService.instance.REF_TRIPS.observe(.value, with: { (snapshot) in
             if let tripSnapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for trip in tripSnapshot {
                     if trip.hasChild("passengerKey") && trip.hasChild("tripIsAccepted") {
@@ -75,14 +75,14 @@ class UpdateService {
         })
     }
     
+
     func acceptTript(withPassengerKey passengerKey: String, forDriverKey driverKey:String) {
-        DataService.instance.REF_TRIPS.child(passengerKey).updateChildValue(["driverKey": driverKey, "tripIsAccepted": true])
-        DataService.instance.REF_DRIVERS.child(driverKey).updateChildValue(["driverInOnTrip": true])
+        DataService.instance.REF_TRIPS.child(passengerKey).updateChildValues(["driverKey": driverKey, "tripIsAccepted": true])
+        DataService.instance.REF_DRIVERS.child(driverKey).updateChildValues(["driverInOnTrip": true])
     }
-    
     func calselTripPassengerKey(withPassengerKey passengerKey: String, forDriverKey driverKey: String) {
         DataService.instance.REF_TRIPS.child(passengerKey).removeValue()
         DataService.instance.REF_USERS.child(passengerKey).child("tripCoordinate").removeValue()
-        DataService.instance.REF_DRIVERS.child(driverKey).updateChildValue(["driverTrip": false])
+        DataService.instance.REF_DRIVERS.child(driverKey).updateChildValues(["driverTrip": false])
     }
 }
