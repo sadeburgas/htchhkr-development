@@ -78,7 +78,7 @@ class UpdateService {
 
     func acceptTript(withPassengerKey passengerKey: String, forDriverKey driverKey:String) {
         DataService.instance.REF_TRIPS.child(passengerKey).updateChildValues(["driverKey": driverKey, "tripIsAccepted": true])
-        DataService.instance.REF_DRIVERS.child(driverKey).updateChildValues(["driverInOnTrip": true])
+        DataService.instance.REF_DRIVERS.child(driverKey).updateChildValues(["driverIsOnTrip": true])
     }
     func calselTripPassengerKey(withPassengerKey passengerKey: String, forDriverKey driverKey: String) {
         DataService.instance.REF_TRIPS.child(passengerKey).removeValue()
