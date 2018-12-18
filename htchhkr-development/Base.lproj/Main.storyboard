@@ -178,6 +178,19 @@
                                     <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgd-uD-FbZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-FY-RnY">
+                                <rect key="frame" x="134" y="531" width="107" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="SkF-xa-S3N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="CANCEL TRIP">
+                                    <color key="titleColor" red="0.84705882349999995" green="0.2784313725" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJa-zf-Fxa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -190,6 +203,7 @@
                             <constraint firstItem="Nks-bM-Sea" firstAttribute="top" secondItem="DUa-FD-g7v" secondAttribute="bottom" id="C7v-d2-q1w"/>
                             <constraint firstItem="sdp-m6-L17" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fpr-rC-H0E"/>
                             <constraint firstItem="0Ww-uc-mLV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lcn-cO-YwD"/>
+                            <constraint firstItem="DUa-FD-g7v" firstAttribute="top" secondItem="CZv-FY-RnY" secondAttribute="bottom" constant="20" id="Lsc-Qe-nEx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fru-Pg-yJz" secondAttribute="trailing" constant="20" id="Nzm-9D-I8W"/>
                             <constraint firstItem="Nks-bM-Sea" firstAttribute="top" secondItem="cr6-1q-48S" secondAttribute="bottom" constant="1" id="cBk-Lz-z5B"/>
                             <constraint firstAttribute="trailing" secondItem="DUa-FD-g7v" secondAttribute="trailing" id="fDn-wm-NUT"/>
@@ -201,11 +215,13 @@
                             <constraint firstItem="sdp-m6-L17" firstAttribute="top" secondItem="0Ww-uc-mLV" secondAttribute="bottom" constant="7" id="rJY-aG-Lgb"/>
                             <constraint firstItem="DUa-FD-g7v" firstAttribute="top" secondItem="Wp5-Nk-d1f" secondAttribute="bottom" constant="8" id="tsa-ij-fyn"/>
                             <constraint firstItem="fru-Pg-yJz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="wou-Ft-KAr"/>
+                            <constraint firstItem="CZv-FY-RnY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xV1-rG-mlD"/>
                             <constraint firstItem="fru-Pg-yJz" firstAttribute="top" secondItem="0Ww-uc-mLV" secondAttribute="bottom" constant="20" id="zSV-GQ-Ke3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="Gd3-fB-d1v" id="NXn-rn-aA3"/>
+                        <outlet property="cancelBtn" destination="CZv-FY-RnY" id="2uO-oA-5Gf"/>
                         <outlet property="centerMapBtn" destination="Wp5-Nk-d1f" id="I5w-cw-ObM"/>
                         <outlet property="destinationCircle" destination="k8b-JL-k0J" id="mHX-AJ-Ibm"/>
                         <outlet property="destinationTextField" destination="gLO-LK-txb" id="dGV-pn-udz"/>
