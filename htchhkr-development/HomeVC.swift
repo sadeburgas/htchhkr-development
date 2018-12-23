@@ -97,12 +97,37 @@ class HomeVC: UIViewController, Alertable  {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        DataService.instance.driverIsAvailable(key: self.currentUserId!, handler:  { (status) in
-            if status == false {
+        DataService.instance.REF_TRIPS.observe(.childRemoved, with: { (removedTripSnapshot) in
+            let removedTripDict = removedTripSnapshot.value as? [String: AnyObject]
+            if removedTripDict?["drivedKey"] != nil {
+                DataService.instance.REF_DRIVERS.child(removedTripDict?["driverKey"] as! String).updateChildValues(["driverIsOnTrip": false])
+            }
+            
+            DataService.instance.userIsDriver(userKey: self.currentUserId!, handler: { (isDriver) in
+                if isDriver == true {
+                    //Remove overlays and annotations / hide request ride btn and cansel btn
+                    self.removeOverlaysAndAnnotations(forDrivers: false, forPassengers: true)
+                        
+                } else {
+                    self.cancelBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                    self.actionBtn.animateButton(shouldLoad: false, withMessage: "REQUEST RIDE")
+                        
+                    self.destinationTextField.isUserInteractionEnabled = true
+                    self.destinationTextField.text = ""
+                        
+                    // remove all map annotation and overlays
+                    self.removeOverlaysAndAnnotations(forDrivers: false, forPassengers: true)
+                    self.centerMapOnUserLocation()
+                    }
+            })
+        })
+        
+        DataService.instance.driverIsOnTrip(driverKey: self.currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
+            if isOnTrip == true {
                 DataService.instance.REF_TRIPS.observeSingleEvent(of: .value, with: { (tripSnapshot) in
                     if let tripSnapshot = tripSnapshot.children.allObjects as? [DataSnapshot] {
                         for trip in tripSnapshot {
-                            if trip.childSnapshot(forPath: "driverKey").value as?   String == self.currentUserId! {
+                            if trip.childSnapshot(forPath: "driverKey").value as? String == self.currentUserId! {
                                 let pickupCoordinateArray = trip.childSnapshot(forPath: "pickupCoordinate").value as! NSArray
                                 let pickupCoordinate = CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees)
                                 let pickupPlacemark = MKPlacemark(coordinate: pickupCoordinate)
@@ -115,40 +140,11 @@ class HomeVC: UIViewController, Alertable  {
                 })
             }
         })
-        
         connectUserAndDriverForTrip()
-        
-        DataService.instance.REF_TRIPS.observe(.childRemoved, with: { (removedTripSnapshot) in
-            let removedTripDict = removedTripSnapshot.value as? [String: AnyObject]
-            if removedTripDict?["drivedKey"] != nil {
-                DataService.instance.REF_DRIVERS.child(removedTripDict?["driverKey"] as! String).updateChildValues(["driverIsOnTrip": false])
-            }
-                DataService.instance.userIsDriver(userKey: self.currentUserId!, handler: { (isDriver) in
-                    if isDriver == true {
-                        //Remove overlays and annotations / hide request ride btn and cansel btn
-                        self.removeOverlaysAndAnnotations(forDrivers: false, forPassengers: true)
-                        
-                    } else {
-                        self.cancelBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
-                        self.actionBtn.animateButton(shouldLoad: false, withMessage: "REQUEST RIDE")
-                        
-                        self.destinationTextField.isUserInteractionEnabled = true
-                        self.destinationTextField.text = ""
-                        
-                        // remove all map annotation and overlays
-                        self.removeOverlaysAndAnnotations(forDrivers: false, forPassengers: true)
-                        self.centerMapOnUserLocation()
-                    }
-                })
-            
-        })
     }
     
     func checkLocationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
-            
-//            manager?.delegate = self
-//            manager?.desiredAccuracy = kCLLocationAccuracyBest
             manager?.startUpdatingLocation()
         } else {
             manager?.requestWhenInUseAuthorization()
@@ -377,8 +373,6 @@ extension HomeVC: MKMapViewDelegate {
         
         shouldPresentLoadingView(false)
         
-        zoom(toFitAnnotationFromMapView: self.mapView, forActiveTripWithDriver: false, withKey: nil)
-        
         return lineRenderer
     }
     
@@ -444,6 +438,8 @@ extension HomeVC: MKMapViewDelegate {
             if self.mapView.overlays.count == 0 {
                  self.mapView.addOverlay(self.route.polyline)
             }
+            
+            self.zoom(toFitAnnotationFromMapView: self.mapView, forActiveTripWithDriver: false, withKey: nil)
             
             let delegate = AppDelegate.getAppDelegate()
             delegate.window?.rootViewController?.shouldPresentLoadingView(false)
